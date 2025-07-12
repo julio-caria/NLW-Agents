@@ -65,3 +65,35 @@ app.listen({ port: env.PORT })
 
 > Busca por similaridade: Procura identificar itens que compartilham características relevantes, mesmo que não sejam idênticos.
 > No contexto de tecnologia e ciência de dados, a busca por similaridade é frequentemente implementada por meio de representações vetoriais (embeddings), onde textos, imagens, sons ou outros tipos de dados são transformados em vetores numéricos de alta dimensão. A similaridade entre esses vetores é então calculada usando métricas como distância euclidiana, similaridade de cosseno ou outras funções matemáticas específicas.
+
+## Configurando o Docker
+
+Configuramos o nosso arquivo `docker-compose.yml` da seguitne forma:
+
+```yml
+services: 
+  nlw-agents-ng:
+    image: pgvector/pgvector:pg17
+    environment: 
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: agents
+    ports: 
+      - "5432:5432"
+    volumes: 
+      - ./docker/setup.sql:/docker-entrypoint-initdb.d/setup.sql
+```
+
+```bash
+docker compose up -d
+```
+
+## Estruturando o banco de Dados
+
+Para esse projeto estamos utilizando o Drizzle ORM em conjunto com o Drizzle kit, para que tudo ocorra como imaginamos, podemos executar a seguinte cadeia de comandos:
+
+```bash
+npx drizzle generate
+```
+
+<!-- 47:24 -->

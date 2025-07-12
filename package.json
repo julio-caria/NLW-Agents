@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "@types/node": "^24.0.13",
+    "drizzle-kit": "^0.31.4",
     "typescript": "^5.8.3"
   },
   "scripts": {
@@ -9,8 +10,10 @@
   },
   "dependencies": {
     "@fastify/cors": "^11.0.1",
+    "drizzle-orm": "^0.44.2",
     "fastify": "^5.4.0",
     "fastify-type-provider-zod": "^5.0.2",
+    "postgres": "^3.4.7",
     "zod": "^4.0.5"
   }
 }
