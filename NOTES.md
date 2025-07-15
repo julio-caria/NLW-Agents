@@ -96,4 +96,49 @@ Para esse projeto estamos utilizando o Drizzle ORM em conjunto com o Drizzle kit
 npx drizzle generate
 ```
 
-<!-- 47:24 -->
+## Instalando o biomeJS
+
+O BiomeJS nada mais é do que um formatador de código, assim como o prettier. Para reallizar sua instalação, basta executar o comando:
+
+```bash
+npm i @biomejs/biome -D
+# Possível adicionar pré configurações para o BiomeJS, utiizando o ultracite:
+npx ultracite init
+```
+
+E assim configurarmos o `.vscode/settings.json` com as seguintes linhas de código:
+
+```json
+{ 
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript][typescript][javascriptreact][typescriptreact][json][jsonc][css][graphql]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "emmet.showExpandedAbbreviation": "never",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  }
+}
+```
+
+E o arquivo `biome.jsonc`:
+
+```jsonc
+{
+  "$schema": "https://biomejs.dev/schemas/2.1.1/schema.json",
+  "extends": [
+    "ultracite"
+  ],
+  "javascript": {
+    "formatter": {
+      "semicolons": "asNeeded"
+    }
+  }
+}
+```
+
+<!-- 55:53 -->
