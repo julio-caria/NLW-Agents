@@ -13,12 +13,11 @@
     "module": "nodenext",
     "target": "es2022",
     "allowImportingTsExtensions": true,
-    // TypeScript Utilizado  para apenas checagem de tipos e não para bundling
     "noEmit": true,
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "moduleResolution": "node16"
+    "moduleResolution": "node16",
+    "strictNullChecks": true
   }
 }
-//
