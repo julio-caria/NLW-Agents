@@ -1,6 +1,6 @@
 services: 
   nlw-agents-ng:
-    image: pgvector/pgvector:pg17
+    image: pgvector/pgvector:pg17 # Extensão será utilizada para realizar busca por similaridade na aplicação.
     environment: 
       POSTGRES_USER: docker
       POSTGRES_PASSWORD: docker
