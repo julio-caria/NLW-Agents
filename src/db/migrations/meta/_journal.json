@@ -8,6 +8,13 @@
       "when": 1752546305629,
       "tag": "0000_cloudy_the_initiative",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1752943058898,
+      "tag": "0001_normal_vision",
+      "breakpoints": true
     }
   ]
 }
