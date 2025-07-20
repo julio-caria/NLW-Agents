@@ -8,3 +8,5 @@
 - Docker
 - Postgres
 - Drizzle ORM / Drizzle Kit (Desenvolvimento)
+
+<!-- 25:40 -->

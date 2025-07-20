@@ -25,9 +25,19 @@ Content-Type: application/json
 
 ### 
 
-@roomId = {{getRooms.response.body.$.[0].id}}
+@roomId = {{createRoom.response.body.$.roomId}}
 
 ### 
 
 # Get Room Questions
 GET {{baseUrl}}/rooms/{{roomId}}/questions
+
+### Create Question
+# @name createQuestion
+
+POST {{baseUrl}}/rooms/{{roomId}}/questions
+Content-Type: application/json
+
+{
+  "question": "Qual o conceito de X dentro de Y?"
+}
