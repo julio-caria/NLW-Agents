@@ -9,4 +9,4 @@
 - Postgres
 - Drizzle ORM / Drizzle Kit (Desenvolvimento)
 
-<!-- 25:40 -->
+<!-- 37:46 -->

@@ -140,5 +140,3 @@ E o arquivo `biome.jsonc`:
   }
 }
 ```
-
-<!-- 55:53 -->
